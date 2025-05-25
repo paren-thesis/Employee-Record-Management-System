@@ -154,8 +154,40 @@ body {
 }
 
 @media (max-width: 600px) {
+    .navbar {
+        padding: 12px 6px;
+        font-size: 1rem;
+    }
+    .logo {
+        font-size: 1rem;
+        gap: 4px;
+    }
     .login-form {
         width: 95vw;
         min-width: 0;
+        padding: 0 2vw;
+        gap: 12px;
+    }
+    .login-form h2 {
+        font-size: 1.2rem;
+    }
+    .login-form label {
+        font-size: 0.98rem;
+    }
+    .login-btn, .admin-btn, .admin-create-btn {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    .forgot-link {
+        font-size: 0.98rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100% !important;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 1rem;
+        padding: 12px 10px;
     }
 } 

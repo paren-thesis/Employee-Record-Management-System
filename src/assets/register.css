@@ -102,8 +102,37 @@ body {
 }
 
 @media (max-width: 600px) {
+    .navbar {
+        padding: 12px 6px;
+        font-size: 1rem;
+    }
+    .logo {
+        font-size: 1rem;
+        gap: 4px;
+    }
     .register-form {
         width: 95vw;
         min-width: 0;
+        padding: 0 2vw;
+        gap: 12px;
+    }
+    .register-form h2 {
+        font-size: 1.2rem;
+    }
+    .register-btn {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    .signin-link a {
+        font-size: 0.98rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100% !important;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 1rem;
+        padding: 12px 10px;
     }
 } 

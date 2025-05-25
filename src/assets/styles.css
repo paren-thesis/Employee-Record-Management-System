@@ -81,4 +81,16 @@ footer {
         align-items: center;
         gap: 24px;
     }
+}
+
+@media (max-width: 600px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100% !important;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
 } 
