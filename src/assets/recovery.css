@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+    color: #222;
+}
+
+.navbar {
+    background: #fff;
+    padding: 16px 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.recovery-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+    padding-top: 40px;
+}
+
+.recovery-form {
+    background: none;
+    padding: 0;
+    border-radius: 8px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.recovery-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.recovery-form .desc {
+    text-align: center;
+    color: #444;
+    font-size: 1.08rem;
+    margin-bottom: 12px;
+}
+
+.recovery-form input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #e9f0f7;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.recovery-form input[type="text"]:focus {
+    box-shadow: 0 0 0 2px #4f8cff33;
+}
+
+.recovery-btn {
+    width: 120px;
+    align-self: center;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #168aff;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.recovery-btn:hover {
+    background: #0f6fd6;
+}
+
+@media (max-width: 600px) {
+    .recovery-form {
+        width: 95vw;
+        min-width: 0;
+    }
+} 
