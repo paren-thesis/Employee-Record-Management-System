@@ -88,6 +88,7 @@ body {
 .signin-link {
     text-align: center;
     margin-top: 16px;
+    padding-bottom: 24px;
 }
 
 .signin-link a {
