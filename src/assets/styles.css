@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+    color: #333;
+}
+
+header {
+    background: #fff;
+    padding: 24px 0 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    text-align: left;
+    padding-left: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 40px 0 0 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    width: 320px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+    color: #333;
+    position: relative;
+}
+
+.card .fa-user {
+    font-size: 2.2rem;
+    color: #b0b0b0;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.card.user-signin {
+    border-left: 4px solid #4f8cff;
+}
+.card.user-signup {
+    border-left: 4px solid #2ecc71;
+}
+.card.admin-login {
+    border-left: 4px solid #00bcd4;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px) scale(1.03);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+} 
