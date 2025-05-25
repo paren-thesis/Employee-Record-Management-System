@@ -22,7 +22,7 @@ body {
     gap: 8px;
 }
 
-.login-main {
+.register-main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -30,7 +30,7 @@ body {
     padding-top: 40px;
 }
 
-.login-form {
+.register-form {
     background: none;
     padding: 0;
     border-radius: 8px;
@@ -40,21 +40,16 @@ body {
     gap: 18px;
 }
 
-.login-form h2 {
+.register-form h2 {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 16px;
 }
 
-.login-form label {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 4px;
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
     width: 100%;
     padding: 12px 16px;
     border: none;
@@ -66,31 +61,19 @@ body {
     transition: box-shadow 0.2s;
 }
 
-.login-form input[type="text"]:focus,
-.login-form input[type="password"]:focus {
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
     box-shadow: 0 0 0 2px #4f8cff33;
 }
 
-.form-row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 8px;
-}
-
-.remember-label {
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 400;
-}
-
-.login-btn, .admin-btn {
+.register-btn {
     width: 100%;
     padding: 12px 0;
     border: none;
     border-radius: 8px;
+    background: #168aff;
+    color: #fff;
     font-size: 1.1rem;
     font-weight: 600;
     margin-top: 8px;
@@ -98,63 +81,28 @@ body {
     transition: background 0.2s, box-shadow 0.2s;
 }
 
-.login-btn {
-    background: #168aff;
-    color: #fff;
-    margin-bottom: 0;
-}
-
-.login-btn:hover {
+.register-btn:hover {
     background: #0f6fd6;
 }
 
-.admin-btn {
-    background: #fff;
-    color: #168aff;
-    border: 2px solid #168aff;
-    margin-top: 8px;
-    margin-bottom: 0;
-}
-
-.admin-btn:hover {
-    background: #e9f0f7;
-}
-
-.admin-create-btn {
-    width: 100%;
-    padding: 12px 0;
-    border: 2px dashed #168aff;
-    border-radius: 8px;
-    background: #f8fafc;
-    color: #168aff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 8px;
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s, border-style 0.2s;
-}
-
-.admin-create-btn:hover {
-    background: #e9f0f7;
-    border-style: solid;
-}
-
-.forgot-link {
-    display: block;
+.signin-link {
     text-align: center;
     margin-top: 16px;
-    color: #222;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1rem;
 }
 
-.forgot-link:hover {
+.signin-link a {
+    color: #168aff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-link a:hover {
     text-decoration: underline;
 }
 
 @media (max-width: 600px) {
-    .login-form {
+    .register-form {
         width: 95vw;
         min-width: 0;
     }
