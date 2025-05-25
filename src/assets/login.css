@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+    color: #222;
+}
+
+.navbar {
+    background: #fff;
+    padding: 16px 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+    padding-top: 40px;
+}
+
+.login-form {
+    background: none;
+    padding: 0;
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.login-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.login-form label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #e9f0f7;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    box-shadow: 0 0 0 2px #4f8cff33;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.remember-label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+}
+
+.login-btn, .admin-btn {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.login-btn {
+    background: #168aff;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.login-btn:hover {
+    background: #0f6fd6;
+}
+
+.admin-btn {
+    background: #fff;
+    color: #168aff;
+    border: 2px solid #168aff;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.admin-btn:hover {
+    background: #e9f0f7;
+}
+
+.forgot-link {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    color: #222;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .login-form {
+        width: 95vw;
+        min-width: 0;
+    }
+} 
