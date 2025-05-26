@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Profile | ERMS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>body{font-family:'Inter',sans-serif}</style>
+</head>
+<body class="bg-[#F5F8FA] text-[#1F2937] min-h-screen">
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-[#F5F8FA]">
+    <div class="flex items-center space-x-2">
+      <svg aria-hidden="true" class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 18a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path>
+        <path d="M6 10a4 4 0 018 0v1H6v-1z"></path>
+      </svg>
+      <span class="font-semibold text-lg select-none">Acme Co</span>
+    </div>
+    <nav class="hidden sm:flex space-x-6 text-sm font-normal text-[#1F2937]">
+      <a class="hover:underline" href="#">Home</a>
+      <a class="hover:underline" href="#">Directory</a>
+      <a class="hover:underline" href="#">Teams</a>
+      <a class="hover:underline" href="#">Goals</a>
+      <a class="hover:underline" href="#">Time Off</a>
+      <a class="hover:underline" href="#">Benefits</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <button aria-label="Notifications" class="p-2 rounded-full bg-[#E6EEF7] text-[#475569] hover:bg-[#D1D9E6] transition-colors">
+        <i class="fas fa-bell text-base"></i>
+      </button>
+      <img alt="Profile" class="w-10 h-10 rounded-full object-cover" draggable="false" src="https://storage.googleapis.com/a1aa/image/5506f626-499c-4f19-3e4a-bab3079baff7.jpg">
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-8">
+    <h1 class="text-xl font-semibold text-[#111827] mb-1">Employee Profile</h1>
+    <p class="text-sm text-[#4B6EAF] mb-8">Manage your employee profile and HR data</p>
+    
+    <section class="flex flex-col sm:flex-row sm:items-center sm:space-x-6 mb-10">
+      <div class="flex-shrink-0 mb-4 sm:mb-0">
+        <img alt="Profile" class="w-24 h-24 rounded-full object-cover" draggable="false" src="https://storage.googleapis.com/a1aa/image/27d823d6-9079-4627-0980-200ec68e51fc.jpg">
+      </div>
+      <div class="flex-1">
+        <p class="font-semibold text-[#111827] text-base leading-5">Sophia Clark</p>
+        <p class="text-sm text-[#4B6EAF] leading-5">Product Manager</p>
+      </div>
+      <div class="mt-4 sm:mt-0">
+        <button class="bg-[#E6EEF7] text-[#475569] text-xs font-semibold px-4 py-2 rounded-md hover:bg-[#D1D9E6] transition-colors" type="button">Edit Profile</button>
+      </div>
+    </section>
+
+    <section class="mb-10 max-w-md">
+      <h2 class="font-semibold text-[#111827] mb-2 text-sm">Bio</h2>
+      <textarea class="w-full rounded-md border border-[#E6EEF7] bg-white text-[#475569] text-xs p-3 placeholder:text-[#94A3B8] resize-none focus:outline-none focus:ring-2 focus:ring-[#4B6EAF]" rows="4"></textarea>
+    </section>
+
+    <section class="max-w-3xl">
+      <h2 class="font-semibold text-[#111827] mb-3 text-sm">Work Experience</h2>
+      <div class="mb-6 relative pl-2 pr-8">
+        <button aria-label="Edit" class="absolute top-0 right-0 text-[#475569] hover:text-[#1F2937] focus:outline-none" type="button">
+          <i class="fas fa-pencil-alt text-sm"></i>
+        </button>
+        <p class="font-semibold text-xs text-[#111827] mb-1 leading-4">Senior Product Manager</p>
+        <p class="text-[#4B6EAF] text-xs mb-1 leading-4">Led the product strategy and roadmap for a flagship product, resulting in a 30% increase in user engagement and a 20% growth in revenue.</p>
+        <p class="text-[#4B6EAF] text-xs leading-4">2018 - Present</p>
+      </div>
+      <div class="mb-6 relative pl-2 pr-8">
+        <button aria-label="Edit" class="absolute top-0 right-0 text-[#475569] hover:text-[#1F2937] focus:outline-none" type="button">
+          <i class="fas fa-pencil-alt text-sm"></i>
+        </button>
+        <p class="font-semibold text-xs text-[#111827] mb-1 leading-4">Product Manager</p>
+        <p class="text-[#4B6EAF] text-xs mb-1 leading-4">Conducted market research and competitive analysis to identify opportunities for new product development.</p>
+        <p class="text-[#4B6EAF] text-xs leading-4">2016 - 2018</p>
+      </div>
+      <button class="bg-[#E6EEF7] text-[#475569] text-xs font-semibold px-4 py-2 rounded-md hover:bg-[#D1D9E6] transition-colors" type="button">Add Work Experience</button>
+    </section>
+
+    <section class="max-w-3xl mt-10">
+      <h2 class="font-semibold text-[#111827] mb-3 text-sm">Education</h2>
+      <div class="mb-6 relative pl-2 pr-8">
+        <button aria-label="Edit" class="absolute top-0 right-0 text-[#475569] hover:text-[#1F2937] focus:outline-none" type="button">
+          <i class="fas fa-pencil-alt text-sm"></i>
+        </button>
+        <p class="font-semibold text-xs text-[#111827] mb-1 leading-4">Bachelor of Science in Business Administration</p>
+        <p class="text-[#4B6EAF] text-xs mb-1 leading-4">Graduated with honors, specializing in Business Administration with a minor in Computer Science.</p>
+        <p class="text-[#4B6EAF] text-xs leading-4">2012 - 2016</p>
+      </div>
+      <button class="bg-[#E6EEF7] text-[#475569] text-xs font-semibold px-4 py-2 rounded-md hover:bg-[#D1D9E6] transition-colors" type="button">Add Education</button>
+    </section>
+  </main>
+</body>
+</html>
