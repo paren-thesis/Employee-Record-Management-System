@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Profile | ERMS</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/user-profile.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 18a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path>
+        <path d="M6 10a4 4 0 018 0v1H6v-1z"></path>
+      </svg>
+      <span class="company-name">ERMS</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Directory</a>
+      <a href="#">Teams</a>
+      <a href="#">Goals</a>
+      <a href="#">Time Off</a>
+      <a href="#">Benefits</a>
+    </nav>
+    <div class="header-right">
+      <button class="notification-btn" aria-label="Notifications">
+        <i class="fas fa-bell"></i>
+      </button>
+      <img class="profile-img" alt="Profile" draggable="false" src="https://storage.googleapis.com/a1aa/image/5506f626-499c-4f19-3e4a-bab3079baff7.jpg">
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Employee Profile</h1>
+    <p class="page-subtitle">Manage your employee profile and HR data</p>
+    
+    <section class="profile-section">
+      <div>
+        <img class="profile-img-large" alt="Profile" draggable="false" src="https://storage.googleapis.com/a1aa/image/27d823d6-9079-4627-0980-200ec68e51fc.jpg">
+      </div>
+      <div class="profile-info">
+        <p class="profile-name">Sophia Clark</p>
+        <p class="profile-role">Product Manager</p>
+      </div>
+      <div>
+        <button class="edit-btn" type="button">Edit Profile</button>
+      </div>
+    </section>
+
+    <section class="bio-section">
+      <h2 class="section-title">Bio</h2>
+      <textarea class="bio-textarea" rows="4" placeholder="Write something about yourself..."></textarea>
+    </section>
+
+    <section class="experience-section">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="experience-item">
+        <button class="edit-icon" aria-label="Edit" type="button">
+          <i class="fas fa-pencil-alt"></i>
+        </button>
+        <p class="item-title">Senior Product Manager</p>
+        <p class="item-description">Led the product strategy and roadmap for a flagship product, resulting in a 30% increase in user engagement and a 20% growth in revenue.</p>
+        <p class="item-date">2018 - Present</p>
+      </div>
+      <div class="experience-item">
+        <button class="edit-icon" aria-label="Edit" type="button">
+          <i class="fas fa-pencil-alt"></i>
+        </button>
+        <p class="item-title">Product Manager</p>
+        <p class="item-description">Conducted market research and competitive analysis to identify opportunities for new product development.</p>
+        <p class="item-date">2016 - 2018</p>
+      </div>
+      <button class="add-btn" type="button">Add Work Experience</button>
+    </section>
+
+    <section class="education-section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-item">
+        <button class="edit-icon" aria-label="Edit" type="button">
+          <i class="fas fa-pencil-alt"></i>
+        </button>
+        <p class="item-title">Bachelor of Science in Business Administration</p>
+        <p class="item-description">Graduated with honors, specializing in Business Administration with a minor in Computer Science.</p>
+        <p class="item-date">2012 - 2016</p>
+      </div>
+      <button class="add-btn" type="button">Add Education</button>
+    </section>
+  </main>
+</body>
+</html>
