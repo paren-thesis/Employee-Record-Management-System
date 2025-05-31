@@ -114,48 +114,38 @@
             </div>
         </div>
 
-        <div class="section-card">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="h4 mb-0">Education History</h2>
-                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addEducationModal">
-                    <i class="fas fa-plus me-2"></i>Add Education
-                </button>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3 class="h5 mb-2">Bachelor of Science in Business Administration</h3>
-                    <p class="text-muted mb-2">2012 - 2016</p>
-                    <p>Graduated with honors, specializing in Business Administration with a minor in Computer Science.</p>
-                    <div class="mt-2">
-                        <button class="btn btn-sm btn-outline-primary me-2" type="button">
-                            <i class="fas fa-pencil-alt me-1"></i>Edit
-                        </button>
-                        <button class="btn btn-sm btn-outline-danger" type="button">
-                            <i class="fas fa-trash-alt me-1"></i>Delete
-                        </button>
-                    </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="mb-0">Education History</h5>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">
+                        <i class="fas fa-plus"></i> Add Education
+                    </button>
                 </div>
 
-                <div class="timeline-item">
-                    <h3 class="h5 mb-2">High School Diploma</h3>
-                    <p class="text-muted mb-2">2008 - 2012</p>
-                    <p>Graduated with distinction, participated in various extracurricular activities including debate team and student council.</p>
-                    <div class="mt-2">
-                        <button class="btn btn-sm btn-outline-primary me-2" type="button">
-                            <i class="fas fa-pencil-alt me-1"></i>Edit
-                        </button>
-                        <button class="btn btn-sm btn-outline-danger" type="button">
-                            <i class="fas fa-trash-alt me-1"></i>Delete
-                        </button>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Degree</th>
+                                <th>Field of Study</th>
+                                <th>Institution</th>
+                                <th>Duration</th>
+                                <th>Grade</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Education records will be loaded dynamically -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Add Education Modal -->
-    <div class="modal fade" id="addEducationModal" tabindex="-1">
+    <!-- Education Modal -->
+    <div class="modal fade" id="educationModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -163,15 +153,38 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="../handlers/education.php" method="POST" class="needs-validation" novalidate>
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="employee_id" id="employee_id">
+                        
                         <div class="mb-3">
-                            <label class="form-label">Degree/Certificate</label>
-                            <input type="text" class="form-control" required>
+                            <label for="degree" class="form-label">Degree <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="degree" name="degree" required>
+                            <div class="invalid-feedback">Please enter degree.</div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Institution</label>
-                            <input type="text" class="form-control" required>
+                            <label for="field" class="form-label">Field of Study <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="field" name="field" required>
+                            <div class="invalid-feedback">Please enter field of study.</div>
                         </div>
+                        <div class="mb-3">
+                            <label for="institution" class="form-label">Institution <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="institution" name="institution" required>
+                            <div class="invalid-feedback">Please enter institution.</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="startDate" class="form-label">Start Date <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="startDate" name="startDate" required>
+                                <div class="invalid-feedback">Please select start date.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="endDate" class="form-label">End Date <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="endDate" name="endDate" required>
+                                <div class="invalid-feedback">Please select end date.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
                         <div class="row mb-3">
                             <div class="col">
                                 <label class="form-label">Start Date</label>

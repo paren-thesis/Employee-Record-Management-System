@@ -98,218 +98,132 @@
 
         <div class="card">
             <div class="card-body">
-                <ul class="nav nav-tabs mb-4" id="editEmployeeTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Profile</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab">Education</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab">Experience</button>
-                    </li>
-                </ul>
-
-                <div class="tab-content" id="editEmployeeTabsContent">
-                    <!-- Profile Tab -->
-                    <div class="tab-pane fade show active" id="profile" role="tabpanel">
-                        <form id="editProfileForm">
-                            <div class="row mb-4">
-                                <div class="col-md-6">
-                                    <h5 class="mb-3">Personal Information</h5>
-                                    <div class="mb-3">
-                                        <label for="firstName" class="form-label required">First Name</label>
-                                        <input type="text" class="form-control" id="firstName" value="John" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="lastName" class="form-label required">Last Name</label>
-                                        <input type="text" class="form-control" id="lastName" value="Doe" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label required">Email</label>
-                                        <input type="email" class="form-control" id="email" value="john.doe@company.com" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label required">Phone</label>
-                                        <input type="tel" class="form-control" id="phone" value="+1 234 567 8900" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="dob" class="form-label required">Date of Birth</label>
-                                        <input type="date" class="form-control" id="dob" value="1990-01-01" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h5 class="mb-3">Employment Details</h5>
-                                    <div class="mb-3">
-                                        <label for="empCode" class="form-label required">Employee Code</label>
-                                        <input type="text" class="form-control" id="empCode" value="EMP001" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="department" class="form-label required">Department</label>
-                                        <select class="form-select" id="department" required>
-                                            <option value="IT" selected>Information Technology</option>
-                                            <option value="HR">Human Resources</option>
-                                            <option value="Finance">Finance</option>
-                                            <option value="Marketing">Marketing</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="position" class="form-label required">Position</label>
-                                        <input type="text" class="form-control" id="position" value="Senior Developer" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="joiningDate" class="form-label required">Joining Date</label>
-                                        <input type="date" class="form-control" id="joiningDate" value="2023-01-15" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="salary" class="form-label required">Salary</label>
-                                        <input type="number" class="form-control" id="salary" value="75000" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-4">
-                                <div class="col-md-6">
-                                    <h5 class="mb-3">Address Information</h5>
-                                    <div class="mb-3">
-                                        <label for="address" class="form-label required">Address</label>
-                                        <textarea class="form-control" id="address" rows="3" required>123 Main Street</textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="city" class="form-label required">City</label>
-                                        <input type="text" class="form-control" id="city" value="New York" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="state" class="form-label required">State</label>
-                                        <input type="text" class="form-control" id="state" value="NY" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="zipCode" class="form-label required">ZIP Code</label>
-                                        <input type="text" class="form-control" id="zipCode" value="10001" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h5 class="mb-3">Emergency Contact</h5>
-                                    <div class="mb-3">
-                                        <label for="emergencyName" class="form-label required">Contact Name</label>
-                                        <input type="text" class="form-control" id="emergencyName" value="Jane Doe" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="emergencyPhone" class="form-label required">Contact Phone</label>
-                                        <input type="tel" class="form-control" id="emergencyPhone" value="+1 234 567 8901" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="emergencyRelation" class="form-label required">Relationship</label>
-                                        <input type="text" class="form-control" id="emergencyRelation" value="Spouse" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex justify-content-end gap-2">
-                                <button type="button" class="btn btn-secondary" onclick="window.location.href='allemployees.html'">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Save Changes</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Education Tab -->
-                    <div class="tab-pane fade" id="education" role="tabpanel">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="mb-0">Education History</h5>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEducationModal">
-                                <i class="fas fa-plus"></i> Add Education
-                            </button>
+                <form action="../handlers/update_employee.php" method="POST" class="needs-validation" novalidate>
+                    <input type="hidden" name="employee_id" id="employee_id">
+                    
+                    <!-- Personal Information -->
+                    <h5 class="mb-3">Personal Information</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            <div class="invalid-feedback">Please enter first name.</div>
                         </div>
-
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Degree</th>
-                                        <th>Institution</th>
-                                        <th>Year</th>
-                                        <th>Grade</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Master of Science</td>
-                                        <td>University of Technology</td>
-                                        <td>2015</td>
-                                        <td>A</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-2">Edit</button>
-                                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Bachelor of Science</td>
-                                        <td>State University</td>
-                                        <td>2013</td>
-                                        <td>A+</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-2">Edit</button>
-                                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            <div class="invalid-feedback">Please enter last name.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                            <div class="invalid-feedback">Please enter phone number.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="dob" class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" id="dob" name="dob" required>
+                            <div class="invalid-feedback">Please select date of birth.</div>
                         </div>
                     </div>
 
-                    <!-- Experience Tab -->
-                    <div class="tab-pane fade" id="experience" role="tabpanel">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="mb-0">Work Experience</h5>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addExperienceModal">
-                                <i class="fas fa-plus"></i> Add Experience
-                            </button>
+                    <!-- Employment Details -->
+                    <h5 class="mb-3 mt-4">Employment Details</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="department" class="form-label">Department <span class="text-danger">*</span></label>
+                            <select class="form-select" id="department" name="department" required>
+                                <option value="">Select Department</option>
+                                <option value="1">IT</option>
+                                <option value="2">HR</option>
+                                <option value="3">Finance</option>
+                                <option value="4">Marketing</option>
+                            </select>
+                            <div class="invalid-feedback">Please select department.</div>
                         </div>
-
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Position</th>
-                                        <th>Company</th>
-                                        <th>Duration</th>
-                                        <th>Description</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Senior Developer</td>
-                                        <td>Tech Corp</td>
-                                        <td>2020 - Present</td>
-                                        <td>Leading development team</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-2">Edit</button>
-                                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Developer</td>
-                                        <td>Web Solutions</td>
-                                        <td>2018 - 2020</td>
-                                        <td>Full-stack development</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-2">Edit</button>
-                                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="col-md-6">
+                            <label for="position" class="form-label">Position <span class="text-danger">*</span></label>
+                            <select class="form-select" id="position" name="position" required>
+                                <option value="">Select Position</option>
+                                <option value="1">Manager</option>
+                                <option value="2">Developer</option>
+                                <option value="3">Designer</option>
+                                <option value="4">Analyst</option>
+                            </select>
+                            <div class="invalid-feedback">Please select position.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="joiningDate" class="form-label">Joining Date <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" id="joiningDate" name="joiningDate" required>
+                            <div class="invalid-feedback">Please select joining date.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="salary" class="form-label">Salary <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="salary" name="salary" required>
+                            <div class="invalid-feedback">Please enter salary.</div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Address Information -->
+                    <h5 class="mb-3 mt-4">Address Information</h5>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="address" class="form-label">Address <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="address" name="address" required>
+                            <div class="invalid-feedback">Please enter address.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="city" class="form-label">City <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="city" name="city" required>
+                            <div class="invalid-feedback">Please enter city.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="state" class="form-label">State <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="state" name="state" required>
+                            <div class="invalid-feedback">Please enter state.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="zipCode" class="form-label">ZIP Code <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="zipCode" name="zipCode" required>
+                            <div class="invalid-feedback">Please enter ZIP code.</div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Contact -->
+                    <h5 class="mb-3 mt-4">Emergency Contact</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="emergencyName" class="form-label">Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="emergencyName" name="emergencyName" required>
+                            <div class="invalid-feedback">Please enter emergency contact name.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="emergencyRelation" class="form-label">Relationship <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="emergencyRelation" name="emergencyRelation" required>
+                            <div class="invalid-feedback">Please enter relationship.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="emergencyPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="emergencyPhone" name="emergencyPhone" required>
+                            <div class="invalid-feedback">Please enter emergency contact phone.</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.location.href='allemployees.html'">Cancel</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <!-- Add Education Modal -->
-    <div class="modal fade" id="addEducationModal" tabindex="-1">
+    <!-- Education Modal -->
+    <div class="modal fade" id="educationModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -317,35 +231,57 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="addEducationForm">
+                    <form action="../handlers/education.php" method="POST" class="needs-validation" novalidate>
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="employee_id" id="education_employee_id">
+                        
                         <div class="mb-3">
-                            <label for="degree" class="form-label required">Degree</label>
-                            <input type="text" class="form-control" id="degree" required>
+                            <label for="degree" class="form-label">Degree <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="degree" name="degree" required>
+                            <div class="invalid-feedback">Please enter degree.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="institution" class="form-label required">Institution</label>
-                            <input type="text" class="form-control" id="institution" required>
+                            <label for="field" class="form-label">Field of Study <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="field" name="field" required>
+                            <div class="invalid-feedback">Please enter field of study.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="year" class="form-label required">Year</label>
-                            <input type="number" class="form-control" id="year" required>
+                            <label for="institution" class="form-label">Institution <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="institution" name="institution" required>
+                            <div class="invalid-feedback">Please enter institution.</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="startDate" class="form-label">Start Date <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="startDate" name="startDate" required>
+                                <div class="invalid-feedback">Please select start date.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="endDate" class="form-label">End Date <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="endDate" name="endDate" required>
+                                <div class="invalid-feedback">Please select end date.</div>
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label for="grade" class="form-label required">Grade</label>
-                            <input type="text" class="form-control" id="grade" required>
+                            <label for="grade" class="form-label">Grade</label>
+                            <input type="text" class="form-control" id="grade" name="grade">
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Add Education</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="document.getElementById('addEducationForm').submit()">Add</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Add Experience Modal -->
-    <div class="modal fade" id="addExperienceModal" tabindex="-1">
+    <!-- Experience Modal -->
+    <div class="modal fade" id="experienceModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -353,40 +289,51 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="addExperienceForm">
+                    <form action="../handlers/experience.php" method="POST" class="needs-validation" novalidate>
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="employee_id" id="experience_employee_id">
+                        
                         <div class="mb-3">
-                            <label for="position" class="form-label required">Position</label>
-                            <input type="text" class="form-control" id="position" required>
+                            <label for="company" class="form-label">Company Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="company" name="company" required>
+                            <div class="invalid-feedback">Please enter company name.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="company" class="form-label required">Company</label>
-                            <input type="text" class="form-control" id="company" required>
+                            <label for="position" class="form-label">Position <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="position" name="position" required>
+                            <div class="invalid-feedback">Please enter position.</div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <label for="startDate" class="form-label required">Start Date</label>
-                                <input type="date" class="form-control" id="startDate" required>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="location" name="location" required>
+                            <div class="invalid-feedback">Please enter location.</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="startDate" class="form-label">Start Date <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="startDate" name="startDate" required>
+                                <div class="invalid-feedback">Please select start date.</div>
                             </div>
-                            <div class="col">
+                            <div class="col-md-6 mb-3">
                                 <label for="endDate" class="form-label">End Date</label>
-                                <input type="date" class="form-control" id="endDate">
+                                <input type="date" class="form-control" id="endDate" name="endDate">
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="currentJob">
+                                <input type="checkbox" class="form-check-input" id="currentJob" name="currentJob">
                                 <label class="form-check-label" for="currentJob">I currently work here</label>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="description" class="form-label required">Description</label>
-                            <textarea class="form-control" id="description" rows="3" required></textarea>
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Add Experience</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="document.getElementById('addExperienceForm').submit()">Add</button>
                 </div>
             </div>
         </div>
