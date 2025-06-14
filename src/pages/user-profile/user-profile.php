@@ -1,3 +1,19 @@
+<?php
+// Start session
+session_start();
+
+// Check if user is logged in
+if (!isset($_SESSION['fullname'])) {
+    header("Location: ../login.php");
+    exit();
+}
+
+// Get user details from session
+$fullname = $_SESSION['fullname'] ?? '';
+$email = $_SESSION['email'] ?? '';
+$employeeid = $_SESSION['employeeid'] ?? '';
+$username = $_SESSION['username'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,11 +116,8 @@
                     <img class="profile-img-large" alt="Profile" src="https://storage.googleapis.com/a1aa/image/27d823d6-9079-4627-0980-200ec68e51fc.jpg">
                 </div>
                 <div class="col">
-                    <h2 class="h4 mb-1">Sophia Clark</h2>
-                    <p class="text-muted mb-0">Product Manager</p>
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-outline-primary" type="button">Edit Profile</button>
+                    <h2 class="h4 mb-1"><?php echo htmlspecialchars($fullname); ?></h2>
+                    <p class="text-muted mb-0">Employee ID: <?php echo htmlspecialchars($employeeid); ?></p>
                 </div>
             </div>
         </div>
@@ -114,27 +127,19 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Full Name</label>
-                    <p class="mb-0">Sophia Clark</p>
+                    <p class="mb-0"><?php echo htmlspecialchars($fullname); ?></p>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Employee ID</label>
-                    <p class="mb-0">EMP001</p>
+                    <p class="mb-0"><?php echo htmlspecialchars($employeeid); ?></p>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Email</label>
-                    <p class="mb-0">sophia.clark@company.com</p>
+                    <p class="mb-0"><?php echo htmlspecialchars($email); ?></p>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label class="form-label">Phone</label>
-                    <p class="mb-0">+1 234 567 8900</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Department</label>
-                    <p class="mb-0">Product Management</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Position</label>
-                    <p class="mb-0">Senior Product Manager</p>
+                    <label class="form-label">Username</label>
+                    <p class="mb-0"><?php echo htmlspecialchars($username); ?></p>
                 </div>
             </div>
         </div>
@@ -149,22 +154,12 @@
                 <h2 class="h4 mb-0">Work Experience</h2>
                 <a href="myexp.php" class="btn btn-outline-primary">View All</a>
             </div>
-            <div class="position-relative mb-4">
-                <h3 class="h5 mb-2">Senior Product Manager</h3>
-                <p class="text-muted mb-2">2018 - Present</p>
-                <p>Led the product strategy and roadmap for a flagship product, resulting in a 30% increase in user engagement.</p>
-            </div>
         </div>
 
         <div class="section-card">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2 class="h4 mb-0">Education</h2>
                 <a href="myeducation.php" class="btn btn-outline-primary">View All</a>
-            </div>
-            <div class="position-relative mb-4">
-                <h3 class="h5 mb-2">Bachelor of Science in Business Administration</h3>
-                <p class="text-muted mb-2">2012 - 2016</p>
-                <p>Graduated with honors, specializing in Business Administration with a minor in Computer Science.</p>
             </div>
         </div>
     </div>

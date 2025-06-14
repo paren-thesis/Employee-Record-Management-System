@@ -1,3 +1,69 @@
+<?php
+// Start session to store user data
+session_start();
+
+// Initialize variables
+$errors = [];
+$success = false;
+
+// Process form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
+    $fullname = trim($_POST['fullname']);
+    $email = trim($_POST['email']);
+    $employeeid = trim($_POST['employeeid']);
+    $username = trim($_POST['username']);
+    $password = $_POST['password'];
+    $confirmpassword = $_POST['confirmpassword'];
+
+    // Validate Full Name
+    if (preg_match('/^\d/', $fullname)) {
+        $errors[] = "Full name cannot start with a number";
+    }
+    if (str_word_count($fullname) < 2) {
+        $errors[] = "Full name must contain at least two words";
+    }
+
+    // Validate Email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format";
+    }
+
+    // Validate Password
+    if (strlen($password) < 8) {
+        $errors[] = "Password must be at least 8 characters long";
+    }
+    if (!preg_match('/[A-Z]/', $password)) {
+        $errors[] = "Password must contain at least one uppercase letter";
+    }
+    if (!preg_match('/[a-z]/', $password)) {
+        $errors[] = "Password must contain at least one lowercase letter";
+    }
+    if (!preg_match('/[0-9]/', $password)) {
+        $errors[] = "Password must contain at least one number";
+    }
+
+    // Check if passwords match
+    if ($password !== $confirmpassword) {
+        $errors[] = "Passwords do not match";
+    }
+
+    // If no errors, proceed with registration
+    if (empty($errors)) {
+        // TODO: Add database connection and user registration logic here
+        
+        // Store user details in session
+        $_SESSION['fullname'] = $fullname;
+        $_SESSION['email'] = $email;
+        $_SESSION['employeeid'] = $employeeid;
+        $_SESSION['username'] = $username;
+        
+        // Redirect to user profile
+        header("Location: user-profile/user-profile.php");
+        exit();
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,23 +109,39 @@
         </div>
     </nav>
     <main class="register-main">
-        <form class="register-form">
+        <form class="register-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <h2 class="text-center mb-4">Create your account</h2>
             
+            <?php if (!empty($errors)): ?>
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        <?php foreach ($errors as $error): ?>
+                            <li><?php echo htmlspecialchars($error); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+
+            <?php if ($success): ?>
+                <div class="alert alert-success">
+                    Registration successful! Redirecting...
+                </div>
+            <?php endif; ?>
+            
             <div class="mb-3">
-                <input type="text" class="form-control" name="fullname" placeholder="Full Name" required>
+                <input type="text" class="form-control" name="fullname" placeholder="Full Name" value="<?php echo isset($fullname) ? htmlspecialchars($fullname) : ''; ?>" required>
             </div>
 
             <div class="mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                <input type="email" class="form-control" name="email" placeholder="Email" value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>" required>
             </div>
 
             <div class="mb-3">
-                <input type="text" class="form-control" name="employeeid" placeholder="Employee ID" required>
+                <input type="text" class="form-control" name="employeeid" placeholder="Employee ID" value="<?php echo isset($employeeid) ? htmlspecialchars($employeeid) : ''; ?>" required>
             </div>
 
             <div class="mb-3">
-                <input type="text" class="form-control" name="username" placeholder="Username" required>
+                <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo isset($username) ? htmlspecialchars($username) : ''; ?>" required>
             </div>
 
             <div class="mb-3">
