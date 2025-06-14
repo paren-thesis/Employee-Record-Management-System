@@ -95,19 +95,6 @@ $username = $_SESSION['username'] ?? '';
     <div class="main-content">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="h3 mb-0">My Profile</h1>
-            <div class="d-flex align-items-center">
-                <div class="dropdown">
-                    <button class="btn btn-link text-dark" type="button" data-bs-toggle="dropdown">
-                        <i class="fas fa-bell"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Profile updated</a></li>
-                        <li><a class="dropdown-item" href="#">New message</a></li>
-                    </ul>
-                </div>
-                <img src="https://storage.googleapis.com/a1aa/image/5506f626-499c-4f19-3e4a-bab3079baff7.jpg" 
-                     alt="Profile" class="profile-img ms-3">
-            </div>
         </div>
 
         <div class="section-card">
