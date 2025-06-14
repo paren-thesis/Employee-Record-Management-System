@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Register | ERMS</title>
+    <title>Password Recovery | ERMS</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -17,14 +17,14 @@
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0,0,0,.08);
         }
-        .register-main {
+        .recovery-main {
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: calc(100vh - 56px);
             padding: 2rem 0;
         }
-        .register-form {
+        .recovery-form {
             background: white;
             padding: 2rem;
             border-radius: 10px;
@@ -42,41 +42,18 @@
             </span>
         </div>
     </nav>
-    <main class="register-main">
-        <form class="register-form">
-            <h2 class="text-center mb-4">Create admin account</h2>
+    <main class="recovery-main">
+        <form class="recovery-form">
+            <h2 class="text-center mb-3">Password Recovery</h2>
+            <p class="text-muted text-center mb-4">Enter your email or employee ID to receive a password reset link or OTP.</p>
             
-            <div class="mb-3">
-                <input type="text" class="form-control" name="fullname" placeholder="Full Name" required>
-            </div>
-
-            <div class="mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Email" required>
-            </div>
-
-            <div class="mb-3">
-                <input type="text" class="form-control" name="adminid" placeholder="Admin ID" required>
-            </div>
-
-            <div class="mb-3">
-                <input type="text" class="form-control" name="username" placeholder="Username" required>
-            </div>
-
-            <div class="mb-3">
-                <input type="password" class="form-control" name="password" placeholder="Password" required>
-            </div>
-
-            <div class="mb-3">
-                <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required>
+            <div class="mb-4">
+                <input type="text" class="form-control" name="identifier" placeholder="Email or Employee ID" required>
             </div>
 
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Register</button>
-                <a href="admin-login.html" class="btn btn-outline-secondary">Back to Admin Login</a>
-            </div>
-
-            <div class="text-center mt-3">
-                <a href="admin-login.html" class="text-decoration-none">Already have an admin account? Sign in</a>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="login.php" class="btn btn-outline-secondary">Back to Login</a>
             </div>
         </form>
     </main>

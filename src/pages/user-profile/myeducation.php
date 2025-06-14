@@ -88,10 +88,10 @@
             <span class="h5 mb-0">ERMS</span>
         </div>
         <nav class="nav flex-column">
-            <a class="nav-link" href="user-profile.html"><i class="fas fa-user"></i> My Profile</a>
-            <a class="nav-link" href="myexp.html"><i class="fas fa-briefcase"></i> My Experience</a>
-            <a class="nav-link active" href="myeducation.html"><i class="fas fa-graduation-cap"></i> My Education</a>
-            <a class="nav-link text-danger" href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a class="nav-link" href="user-profile.php"><i class="fas fa-user"></i> My Profile</a>
+            <a class="nav-link" href="myexp.php"><i class="fas fa-briefcase"></i> My Experience</a>
+            <a class="nav-link active" href="myeducation.php"><i class="fas fa-graduation-cap"></i> My Education</a>
+            <a class="nav-link text-danger" href="../index.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </nav>
     </div>
 

@@ -63,11 +63,11 @@
 
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Login as Admin</button>
-                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='admin-register.html'">Create Admin account</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='admin-register.php'">Create Admin account</button>
             </div>
 
             <div class="text-center mt-3">
-                <a href="password-recovery.html" class="text-decoration-none">Forgot Password?</a>
+                <a href="password-recovery.php" class="text-decoration-none">Forgot Password?</a>
             </div>
         </form>
     </main>

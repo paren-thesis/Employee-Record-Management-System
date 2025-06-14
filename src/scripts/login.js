@@ -19,9 +19,9 @@ function handleLogin(event) {
         if (data.success) {
             // Redirect based on user role
             if (data.user.role === 'admin') {
-                window.location.href = 'admin-dashboard.html';
+                window.location.href = 'admin-dashboard.php';
             } else {
-                window.location.href = 'user-profile/user-profile.html';
+                window.location.href = 'user-profile/user-profile.php';
             }
         } else {
             alert(data.message);

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | ERMS</title>
+    <title>Login | ERMS</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -17,14 +17,14 @@
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0,0,0,.08);
         }
-        .register-main {
+        .login-main {
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: calc(100vh - 56px);
             padding: 2rem 0;
         }
-        .register-form {
+        .login-form {
             background: white;
             padding: 2rem;
             border-radius: 10px;
@@ -42,45 +42,39 @@
             </span>
         </div>
     </nav>
-    <main class="register-main">
-        <form class="register-form">
-            <h2 class="text-center mb-4">Create your account</h2>
+    <main class="login-main">
+        <form class="login-form">
+            <h2 class="text-center mb-4">Welcome back</h2>
             
             <div class="mb-3">
-                <input type="text" class="form-control" name="fullname" placeholder="Full Name" required>
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
             </div>
 
             <div class="mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
             </div>
 
-            <div class="mb-3">
-                <input type="text" class="form-control" name="employeeid" placeholder="Employee ID" required>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                <label class="form-check-label" for="remember">Remember me</label>
             </div>
 
-            <div class="mb-3">
-                <input type="text" class="form-control" name="username" placeholder="Username" required>
-            </div>
-
-            <div class="mb-3">
-                <input type="password" class="form-control" name="password" placeholder="Password" required>
-            </div>
-
-            <div class="mb-3">
-                <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required>
-            </div>
-
-            <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Register</button>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='admin-login.php'">Login as Admin</button>
             </div>
 
             <div class="text-center mt-3">
-                <a href="login.html" class="text-decoration-none">Already have an account? Sign in</a>
+                <a href="password-recovery.php" class="text-decoration-none d-block mb-2">Forgot Password?</a>
+                <a href="register.php" class="text-decoration-none">Don't have an account? Sign up</a>
             </div>
         </form>
     </main>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/login.js"></script>
 </body>
 </html> 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +15,21 @@
             display: flex;
             flex-direction: column;
         }
+
         main {
             flex: 1;
         }
+
         .card {
             transition: transform 0.2s ease-in-out;
         }
+
         .card:hover {
             transform: translateY(-5px);
         }
     </style>
 </head>
+
 <body class="bg-light">
     <header class="bg-white shadow-sm py-4">
         <div class="container">
@@ -35,7 +40,7 @@
         <div class="container">
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
-                    <a href="login.html" class="text-decoration-none">
+                    <a href="login.php" class="text-decoration-none">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-4">
                                 <i class="fas fa-user fa-3x text-primary mb-3"></i>
@@ -45,7 +50,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="register.html" class="text-decoration-none">
+                    <a href="register.php" class="text-decoration-none">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-4">
                                 <i class="fas fa-user-plus fa-3x text-success mb-3"></i>
@@ -55,7 +60,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="admin-login.html" class="text-decoration-none">
+                    <a href="admin-login.php" class="text-decoration-none">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-4">
                                 <i class="fas fa-user-shield fa-3x text-danger mb-3"></i>
@@ -65,27 +70,6 @@
                     </a>
                 </div>
             </div>
-            <form action="../handlers/login.php" method="POST" class="needs-validation" novalidate>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" required>
-                    <div class="invalid-feedback">
-                        Please enter your username.
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                    <div class="invalid-feedback">
-                        Please enter your password.
-                    </div>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="rememberMe">
-                    <label class="form-check-label" for="rememberMe">Remember me</label>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Login</button>
-            </form>
         </div>
     </main>
     <footer class="bg-white py-3 mt-auto">
@@ -97,4 +81,5 @@
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+
+</html>

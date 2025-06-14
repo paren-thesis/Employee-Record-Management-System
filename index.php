@@ -21,7 +21,7 @@
         </div>
     </header>
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-        <a href="src/pages/index.html" class="btn btn-primary btn-lg px-4 py-3 shadow-sm">Click to continue</a>
+        <a href="src/pages/index.php" class="btn btn-primary btn-lg px-4 py-3 shadow-sm">Click to continue</a>
     </div>
 
     <!-- Bootstrap JS Bundle with Popper -->

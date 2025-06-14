@@ -58,12 +58,12 @@
             <span class="h5 mb-0">ERMS</span>
         </div>
         <nav class="nav flex-column">
-            <a class="nav-link" href="admin-panel.html"><i class="fas fa-home"></i> Dashboard</a>
-            <a class="nav-link" href="allemployees.html"><i class="fas fa-users"></i> Employees</a>
-            <a class="nav-link active" href="addemployee.html"><i class="fas fa-user-plus"></i> Add Employee</a>
-            <a class="nav-link" href="editemployee.html"><i class="fas fa-user-edit"></i> Edit Employee</a>
-            <a class="nav-link" href="search.html"><i class="fas fa-search"></i> Search</a>
-            <a class="nav-link text-danger" href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a class="nav-link" href="admin-panel.php"><i class="fas fa-home"></i> Dashboard</a>
+            <a class="nav-link" href="allemployees.php"><i class="fas fa-users"></i> Employees</a>
+            <a class="nav-link active" href="addemployee.php"><i class="fas fa-user-plus"></i> Add Employee</a>
+            <a class="nav-link" href="editemployee.php"><i class="fas fa-user-edit"></i> Edit Employee</a>
+            <a class="nav-link" href="search.php"><i class="fas fa-search"></i> Search</a>
+            <a class="nav-link text-danger" href="../index.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </nav>
     </div>
 
@@ -231,7 +231,7 @@
                     </div>
 
                     <div class="d-flex justify-content-end gap-2">
-                        <button type="button" class="btn btn-secondary" onclick="window.location.href='allemployees.html'">Cancel</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.location.href='allemployees.php'">Cancel</button>
                         <button type="submit" class="btn btn-primary">Add Employee</button>
                     </div>
                 </form>
@@ -246,7 +246,7 @@
             e.preventDefault();
             // Add your form submission logic here
             alert('Employee added successfully!');
-            window.location.href = 'allemployees.html';
+            window.location.href = 'allemployees.php';
         });
     </script>
 </body>
